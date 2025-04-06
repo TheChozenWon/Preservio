@@ -1,0 +1,74 @@
+.header {
+  grid-area: header;
+}
+
+.logo {
+  margin-right: auto;
+  position: absolute;
+}
+
+.logoImage {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5em;
+}
+
+.title {
+  margin: auto;
+  top: 0;
+  padding: 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  grid-area: navbar;
+  background-color: #c1cfa1;
+}
+
+.navButton {
+  text-align: left;
+  background: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+}
+
+.navButton:hover {
+  background-color: #9eb171;
+}
+.navButton:focus {
+  background-color: #537e53;
+  outline: none;
+}
+
+.main {
+  grid-area: page;
+  overflow: auto;
+}
+
+.body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "navbar page";
+}

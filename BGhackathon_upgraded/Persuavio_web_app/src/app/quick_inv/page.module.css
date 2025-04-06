@@ -1,0 +1,26 @@
+.useButton {
+  display: block;
+  text-align: center;
+  background: none;
+  border: 1px solid var(--use-button-color);
+  border-radius: 8px;
+  color: var(--use-button-color);
+  padding: 0.5rem;
+  width: 90%;
+  margin: .75em auto;
+  cursor: pointer;
+}
+
+.useButton:hover {
+  background: var(--use-button-hover-color);
+}
+
+.useOneButton {
+  --use-button-color: #007bff;
+  --use-button-hover-color: rgb(222, 238, 255);
+}
+
+.useAllButton {
+  --use-button-color: #a72828;
+  --use-button-hover-color: #ffecec;
+}
